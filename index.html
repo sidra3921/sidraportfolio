@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidra — AI/ML Engineer &amp; Flutter Developer | ML, RAG, LLMs &amp; Mobile Apps</title>
+  <meta name="description" content="Sidra is an AI/ML Engineer and Flutter developer in Lahore, Pakistan, building end-to-end ML pipelines, RAG &amp; LLM applications, and cross-platform mobile apps with Flutter and Firebase." />
+  <meta name="author" content="Sidra" />
+  <meta name="keywords" content="AI/ML Engineer, Flutter Developer, Dart, Firebase, Mobile App Development, Machine Learning, RAG, LLM, FastAPI, LangChain, Python, Lahore, Pakistan" />
+  <meta name="theme-color" content="#070b16" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sidra — AI/ML Engineer &amp; Flutter Developer" />
+  <meta property="og:description" content="End-to-end ML pipelines, RAG &amp; LLM applications, and cross-platform Flutter apps." />
+  <!--
+    TODO: once deployed, add an absolute preview image + your live URL, e.g.
+    <meta property="og:image" content="https://res.cloudinary.com/<cloud-name>/image/upload/c_fill,w_1200,h_630,q_auto,f_auto/sidra-og.jpg" />
+    <meta property="og:url" content="https://your-site.netlify.app/" />
+  -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts: Space Grotesk (headings), Inter (body), JetBrains Mono (code accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Apply saved theme before first paint (prevents a flash of the wrong theme) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('sidra-theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) { /* storage unavailable — keep dark default */ }
+    })();
+  </script>
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sidra",
+    "jobTitle": "AI/ML Engineer & Flutter Developer",
+    "email": "mailto:sidra3921@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Lahore College for Women University" },
+    "knowsAbout": ["Machine Learning", "Retrieval-Augmented Generation", "Large Language Models", "MLOps", "FastAPI", "Python", "Flutter", "Dart", "Firebase", "Mobile App Development", "Web Accessibility (WCAG)"],
+    "sameAs": ["https://www.linkedin.com/in/sidra3921", "https://github.com/sidra3921"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================================
+       SVG ICON SPRITE — referenced below with <use href="#i-name">
+       ============================================================ -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 14.5A2 2 0 0 0 8.5 13.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 8.94A2 2 0 0 0 9.94 7.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4V8z"/></symbol>
+    <symbol id="i-phone-app" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-images" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.3-1.3a2.41 2.41 0 0 0-3.4 0L11 18"/><circle cx="12" cy="8" r="2"/><rect x="6" y="2" width="16" height="16" rx="2"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+  </svg>
+
+  <!-- Reading progress bar -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="brand" aria-label="Sidra — back to top">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name">Sidra<span class="brand-dot">.</span></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#research">Research</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid-pattern"></div>
+        <span class="hero-glow hero-glow-1"></span>
+        <span class="hero-glow hero-glow-2"></span>
+        <canvas id="hero-canvas"></canvas>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="status-pill"><span class="pulse-dot" aria-hidden="true"></span> Open to AI/ML &amp; Flutter opportunities</p>
+
+          <h1 class="hero-title">Hi, I'm <span class="gradient-text">Sidra</span></h1>
+
+          <!-- Typing effect: edit the roles in data-roles -->
+          <p class="hero-role">
+            <span class="hero-prompt" aria-hidden="true">&gt;_</span>
+            <span class="visually-hidden">AI/ML Engineer, Flutter App Developer, LLM &amp; RAG Specialist, Cross-Platform Mobile Developer</span>
+            <span class="typed-text" id="typed-text" aria-hidden="true"
+                  data-roles='["AI/ML Engineer", "Flutter App Developer", "LLM & RAG Specialist", "Cross-Platform Mobile Developer"]'>AI/ML Engineer</span><span class="typed-cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-summary">
+            I build <strong>end-to-end ML pipelines and RAG/LLM applications</strong> — from EDA and model training
+            to FastAPI deployment — and ship <strong>cross-platform Flutter apps</strong> backed by Firebase,
+            including a published Play Store app with 100+ downloads.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              View Projects
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+            </a>
+            <!-- Resume lives at assets/Sidra-Resume.pdf — replace that file to update it -->
+            <a href="assets/Sidra-Resume.pdf" class="btn btn-outline btn-download" download="Sidra-Resume.pdf">
+              Download Resume
+              <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="hero-location">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>
+              Lahore, Pakistan
+            </span>
+            <span class="hero-divider" aria-hidden="true"></span>
+            <ul class="social-row" aria-label="Social profiles">
+              <li><a class="icon-btn" href="https://github.com/sidra3921" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></li>
+              <li><a class="icon-btn" href="https://www.linkedin.com/in/sidra3921" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a></li>
+              <li><a class="icon-btn" href="mailto:sidra3921@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-wrap">
+            <span class="profile-orbit" aria-hidden="true"></span>
+            <span class="profile-ring" aria-hidden="true"></span>
+            <div class="profile-frame">
+              <!--
+                PROFILE IMAGE — Cloudinary ready.
+                To serve it from Cloudinary instead, replace src with e.g.:
+                https://res.cloudinary.com/<cloud-name>/image/upload/c_fill,g_face,w_600,h_600,q_auto,f_auto/sidra-profile.jpg
+                (c_fill + g_face crops around your face; q_auto,f_auto serve the smallest format the browser supports.)
+              -->
+              <img class="profile-img"
+                   src="assets/images/sidra-profile.jpg"
+                   alt="Portrait of Sidra, AI/ML Engineer"
+                   width="630" height="630"
+                   fetchpriority="high" decoding="async" />
+            </div>
+
+            <div class="float-chip chip-1" aria-hidden="true">
+              <svg class="icon"><use href="#i-phone-app" /></svg> Flutter · Dart
+            </div>
+            <div class="float-chip chip-2" aria-hidden="true">
+              <svg class="icon"><use href="#i-target" /></svg> 80%+ ML Accuracy
+            </div>
+            <div class="float-chip chip-3" aria-hidden="true">
+              <svg class="icon"><use href="#i-sparkles" /></svg> RAG · LLMs
+            </div>
+          </div>
+        </div>
+
+        <!--
+          DEVELOPER PROFILE CARD — VS Code style editor window.
+          Edit the code below as plain text; script.js adds syntax highlighting,
+          line numbers and wrapping. (Escape & as &amp; and < as &lt; in HTML.)
+        -->
+        <figure class="hero-code">
+          <div class="code-window">
+            <div class="code-titlebar">
+              <span class="code-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="code-tab"><span class="ts-badge" aria-hidden="true">TS</span>sidraProfile.ts</span>
+              <span class="code-lang" aria-hidden="true">TypeScript</span>
+            </div>
+            <pre class="code-body"><code id="profile-code">const sidraProfile = {
+  name: "Sidra",
+  role: "AI/ML Engineer &amp; Flutter Developer",
+  specialization: ["Mobile App Development", "AI/ML &amp; RAG Pipelines"],
+  skills: {
+    mobileAppDev: ["Flutter SDK", "Dart", "Firebase", "Firestore", "Crashlytics"],
+    aiAndML: ["Python", "Scikit-learn", "LangChain", "ChromaDB", "Ollama", "Llama 3"],
+    backendAndApis: ["FastAPI", "RESTful APIs", "Firebase Auth"],
+    deploymentAndTools: ["Google Play Store", "Git", "GitHub", "Agile/Scrum"]
+  },
+  highlights: "Published Play Store App (100+ Downloads) | 80%+ ML Model Accuracy"
+};</code></pre>
+            <div class="code-statusbar" aria-hidden="true">
+              <span><svg class="icon"><use href="#i-branch" /></svg> main</span>
+              <span class="code-status-right">
+                <span id="code-pos">Ln 13, Col 3</span>
+                <span class="hide-sm">UTF-8</span>
+                <span>TypeScript</span>
+              </span>
+            </div>
+          </div>
+          <figcaption class="visually-hidden">Sidra's developer profile written as a TypeScript object.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>01</span> About Me</p>
+          <h2 class="section-title">From ML models to <span class="gradient-text">mobile apps</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="lead">
+              I'm an AI/ML Engineer and Flutter developer. I turn raw data into production-ready models — owning the
+              full lifecycle from preprocessing and EDA through training, tuning, and FastAPI deployment — and turn
+              ideas into cross-platform mobile apps.
+            </p>
+            <p>
+              At <strong>NETSOL Technologies</strong>, I engineered 3+ production-ready ML pipelines and trained
+              Logistic Regression and KNN classifiers on 1,000+ record datasets, reaching 80%+ accuracy through
+              hyperparameter tuning and cross-validation. Before that, at <strong>Headstarter AI</strong>, I delivered
+              AI/ML milestones across weekly sprints as part of a 4-member agile team.
+            </p>
+            <p>
+              Beyond classical ML, I build <strong>RAG and LLM applications</strong> — like a fully local Wikipedia
+              chatbot powered by LangChain, ChromaDB and Llama 3. On the mobile side, I ship <strong>Flutter apps</strong>
+              backed by Firebase Auth, Firestore and Crashlytics, including a published Google Play app with 100+ downloads.
+              I'm currently architecting <strong>SheCan AI</strong>, a recommendation engine connecting women in Pakistan
+              with freelance and gig work.
+            </p>
+            <p>
+              My current <strong>research</strong> asks whether LLMs generate accessible interfaces for Urdu speakers —
+              measuring right-to-left failures in AI-generated UIs against WCAG.
+            </p>
+          </div>
+
+          <div class="about-side">
+            <div class="stats-grid">
+              <div class="stat-card reveal">
+                <span class="stat-num" data-count="3" data-suffix="+">3+</span>
+                <span class="stat-label">Production-ready ML pipelines</span>
+              </div>
+              <div class="stat-card reveal">
+                <span class="stat-num" data-count="80" data-suffix="%+">80%+</span>
+                <span class="stat-label">Classifier accuracy after tuning</span>
+              </div>
+              <div class="stat-card reveal">
+                <span class="stat-num" data-count="100" data-suffix="+">100+</span>
+                <span class="stat-label">Downloads of my Play Store app</span>
+              </div>
+              <div class="stat-card reveal">
+                <span class="stat-num" data-count="7">7</span>
+                <span class="stat-label">AI certifications earned</span>
+              </div>
+            </div>
+
+            <ul class="about-facts reveal">
+              <li>
+                <svg class="icon fact-icon" aria-hidden="true"><use href="#i-pin" /></svg>
+                <span><small>Location</small>Lahore, Pakistan</span>
+              </li>
+              <li>
+                <svg class="icon fact-icon" aria-hidden="true"><use href="#i-cap" /></svg>
+                <span><small>Education</small>BE Software Engineering, LCWU</span>
+              </li>
+              <li>
+                <svg class="icon fact-icon" aria-hidden="true"><use href="#i-target" /></svg>
+                <span><small>Focus</small>AI/ML · RAG &amp; LLMs · Flutter</span>
+              </li>
+              <li>
+                <svg class="icon fact-icon" aria-hidden="true"><use href="#i-mail" /></svg>
+                <span><small>Email</small><a href="mailto:sidra3921@gmail.com">sidra3921@gmail.com</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <article class="card highlight-card reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-cpu" /></svg></span>
+            <h3>End-to-End ML Pipelines</h3>
+            <p>Ingestion, EDA, feature engineering, training and evaluation — shipped as one reproducible workflow.</p>
+          </article>
+          <article class="card highlight-card tone-2 reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-sparkles" /></svg></span>
+            <h3>RAG &amp; LLM Applications</h3>
+            <p>Local retrieval-augmented chatbots built with LangChain, ChromaDB, Ollama and Llama 3.</p>
+          </article>
+          <article class="card highlight-card reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-phone-app" /></svg></span>
+            <h3>Cross-Platform Mobile Apps</h3>
+            <p>Flutter &amp; Dart apps with Firebase Auth, Firestore and Crashlytics — published on Google Play.</p>
+          </article>
+          <article class="card highlight-card tone-2 reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-zap" /></svg></span>
+            <h3>Model Serving &amp; APIs</h3>
+            <p>Trained models exposed as scalable FastAPI REST endpoints for real-time inference.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE (timeline)
+         ============================================================ -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>02</span> Experience</p>
+          <h2 class="section-title">Where I've <span class="gradient-text">built &amp; shipped</span></h2>
+          <p class="section-sub">From production ML pipelines to agile AI teams and community workshops.</p>
+        </header>
+
+        <ol class="timeline">
+          <!-- NETSOL -->
+          <li class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date">Feb 2026 – Jun 2026</span>
+              <span class="timeline-loc"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg> Lahore, Pakistan</span>
+            </div>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <article class="card timeline-card">
+              <h3 class="timeline-role">AI/ML Engineer Trainee</h3>
+              <p class="timeline-company">NETSOL Technologies Pakistan</p>
+              <ul class="timeline-points">
+                <li>Engineered 3+ production-ready ML pipelines — data ingestion, EDA, feature engineering, model training, evaluation and REST API deployment — using Python, Pandas, Scikit-learn and FastAPI.</li>
+                <li>Trained and optimized Logistic Regression and K-Nearest Neighbors (KNN) classifiers on 1,000+ record datasets, achieving 80%+ accuracy through systematic hyperparameter tuning and cross-validation.</li>
+                <li>Applied advanced feature selection and engineering techniques that directly improved model performance and generalization on benchmark classification tasks.</li>
+                <li>Deployed trained ML models as scalable REST APIs using FastAPI, enabling real-time inference consumption by downstream applications.</li>
+                <li>Conducted structured EDA and data quality assessments on datasets of 1,000+ records, resolving inconsistencies and improving pipeline reliability.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Python</li><li class="tag">Pandas</li><li class="tag">Scikit-learn</li>
+                <li class="tag">FastAPI</li><li class="tag">EDA</li><li class="tag">Logistic Regression</li><li class="tag">KNN</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- Headstarter AI -->
+          <li class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date">Jul 2024 – Nov 2025</span>
+              <span class="timeline-loc"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg> New York, NY</span>
+            </div>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <article class="card timeline-card">
+              <h3 class="timeline-role">AI/ML Intern</h3>
+              <p class="timeline-company">Headstarter AI</p>
+              <ul class="timeline-points">
+                <li>Processed and analyzed 1,000+ record datasets using Pandas and NumPy, implementing feature engineering strategies that improved downstream model accuracy with Scikit-learn.</li>
+                <li>Collaborated on ML model development within a 4-member agile team, contributing 10+ code commits and enforcing quality through structured peer code reviews on GitHub.</li>
+                <li>Delivered AI/ML project milestones across 5+ weekly sprint cycles, maintaining consistent on-schedule delivery within an agile workflow.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Pandas</li><li class="tag">NumPy</li><li class="tag">Scikit-learn</li>
+                <li class="tag">Feature Engineering</li><li class="tag">GitHub</li><li class="tag">Agile</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- ACM UET Lahore -->
+          <li class="timeline-item reveal">
+            <div class="timeline-meta">
+              <span class="timeline-date">Jun 2024 – Jun 2025</span>
+              <span class="timeline-loc"><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg> Lahore, Punjab</span>
+            </div>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <article class="card timeline-card">
+              <h3 class="timeline-role">Technical Intern</h3>
+              <p class="timeline-company">ACM UET Lahore</p>
+              <ul class="timeline-points">
+                <li>Organized technical workshops on AI/ML and software engineering topics, contributing to practical skill development across the student engineering community.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Focus areas">
+                <li class="tag">AI/ML</li><li class="tag">Software Engineering</li><li class="tag">Workshops</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS
+         ============================================================ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>03</span> Featured Projects</p>
+          <h2 class="section-title">Things I've <span class="gradient-text">engineered</span></h2>
+          <p class="section-sub">LLM &amp; RAG apps, Flutter mobile platforms, AI-powered web apps and production ML pipelines.</p>
+        </header>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="genai" aria-pressed="false">GenAI &amp; RAG</button>
+          <button class="filter-btn" type="button" data-filter="ml" aria-pressed="false">Machine Learning</button>
+          <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile Apps</button>
+          <button class="filter-btn" type="button" data-filter="mlops" aria-pressed="false">MLOps &amp; APIs</button>
+        </div>
+        <p class="visually-hidden" id="filter-status" aria-live="polite"></p>
+
+        <div class="projects-grid">
+          <!-- Project 1 — Wikipedia RAG Chatbot -->
+          <article class="card project-card reveal" data-category="genai">
+            <div class="project-media">
+              <!-- Swap src for a screenshot or Cloudinary banner. To add a screenshot gallery,
+                   copy the .media-gallery link and .gallery-data list from the SheCan AI card. -->
+              <img src="assets/images/project-rag.svg" alt="Diagram of the Wikipedia RAG chatbot: articles are embedded into a vector store and retrieved to ground Llama 3 answers" width="800" height="450" loading="lazy" decoding="async" />
+              <span class="project-badge">Fully Local</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">GenAI · RAG</p>
+              <h3 class="project-title">Wikipedia RAG Chatbot</h3>
+              <p class="project-desc">A fully local Retrieval-Augmented Generation chatbot that answers questions using information retrieved from Wikipedia articles, combining vector search with LLM-based response generation.</p>
+              <ul class="project-points">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Wikipedia ingestion with embeddings via Ollama (nomic-embed-text)</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Semantic search in ChromaDB for accurate context retrieval</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Llama 3 served locally — no external APIs, full data privacy</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Streamlit web interface for real-time querying</li>
+              </ul>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li class="tag">Python</li><li class="tag">LangChain</li><li class="tag">ChromaDB</li>
+                <li class="tag">Ollama</li><li class="tag">Llama 3</li><li class="tag">Streamlit</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sidra3921/ollama_rag_project" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg> Source Code
+                </a>
+                <!-- TODO: replace href="#" with the live demo URL and remove data-demo-pending -->
+                <a class="project-link" href="#" data-demo-pending>
+                  <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 — SheCan AI -->
+          <article class="card project-card reveal" data-category="ml mobile">
+            <div class="project-media">
+              <img src="assets/projects/shecan/cover.jpg" alt="SheCan AI app screens: client home, AI assistant chat and explore page" width="1200" height="675" loading="lazy" decoding="async" />
+              <span class="project-badge project-badge--live">In Progress</span>
+              <!-- Opens the screenshot gallery below (links to the first image without JS) -->
+              <a class="media-gallery" href="assets/projects/shecan/01-join-as.jpg" data-gallery-open="shecan" aria-label="View 8 SheCan AI app screenshots">
+                <span class="media-gallery-chip"><svg class="icon" aria-hidden="true"><use href="#i-images" /></svg> 8 screenshots</span>
+              </a>
+            </div>
+            <!--
+              SCREENSHOT GALLERY — one <li> per image, shown in order in the image viewer.
+              data-src = full image, data-thumb = small preview, data-caption = text under the image.
+              Copy this block into any other project card (and add a .media-gallery link) to give it a gallery.
+            -->
+            <ul class="gallery-data" data-gallery="shecan" data-title="SheCan AI" hidden>
+              <li data-src="assets/projects/shecan/01-join-as.jpg" data-thumb="assets/projects/shecan/thumbs/01-join-as.jpg" data-caption="Onboarding — join as a woman (mentor or freelancer) or as a client"></li>
+              <li data-src="assets/projects/shecan/02-client-home.jpg" data-thumb="assets/projects/shecan/thumbs/02-client-home.jpg" data-caption="Client workspace with the AI Brief Assistant, analytics and featured services"></li>
+              <li data-src="assets/projects/shecan/03-explore.jpg" data-thumb="assets/projects/shecan/thumbs/03-explore.jpg" data-caption="Explore — search gigs, skills and categories across services and courses"></li>
+              <li data-src="assets/projects/shecan/04-ai-assistant.jpg" data-thumb="assets/projects/shecan/thumbs/04-ai-assistant.jpg" data-caption="SheCan AI Assistant guiding a user through creating a painting gig, with voice input"></li>
+              <li data-src="assets/projects/shecan/05-mentor-studio.jpg" data-thumb="assets/projects/shecan/thumbs/05-mentor-studio.jpg" data-caption="Mentor studio — manage services, courses, orders and growth tools"></li>
+              <li data-src="assets/projects/shecan/06-mentor-profile.jpg" data-thumb="assets/projects/shecan/thumbs/06-mentor-profile.jpg" data-caption="Mentor profile with projects, rating, skills and reviews"></li>
+              <li data-src="assets/projects/shecan/07-chats.jpg" data-thumb="assets/projects/shecan/thumbs/07-chats.jpg" data-caption="Chats with the SheCan AI Assistant and clients"></li>
+              <li data-src="assets/projects/shecan/08-client-profile.jpg" data-thumb="assets/projects/shecan/thumbs/08-client-profile.jpg" data-caption="Client profile with payment methods, order history and saved mentors"></li>
+            </ul>
+            <div class="project-body">
+              <p class="project-kicker">Flutter · ML · Social Impact</p>
+              <h3 class="project-title">SheCan AI</h3>
+              <p class="project-desc">An AI-powered gig recommendation platform: an ML-driven engine that matches women in Pakistan to freelance and gig opportunities based on their skills, interests, and availability.</p>
+              <ul class="project-points">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Matching on skills, interests &amp; availability</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Python ML backend with real-time Firebase data sync</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Personalized recommendations from a trained matching model</li>
+              </ul>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li class="tag">Flutter</li><li class="tag">Dart</li><li class="tag">Python</li>
+                <li class="tag">Machine Learning</li><li class="tag">Firebase</li><li class="tag">Recommendation Engine</li>
+              </ul>
+              <div class="project-links">
+                <!-- Add a "Source Code" link here once the SheCan-AI- repo has code pushed to it -->
+                <a class="project-link" href="https://shecan-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 — End-to-End ML Pipeline with FastAPI -->
+          <article class="card project-card reveal" data-category="ml mlops">
+            <div class="project-media">
+              <img src="assets/images/project-pipeline.svg" alt="Diagram of the ML pipeline: ingest, EDA, features, train, evaluate, then serve with FastAPI" width="800" height="450" loading="lazy" decoding="async" />
+              <span class="project-badge">80%+ Accuracy</span>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">ML Pipeline · MLOps</p>
+              <h3 class="project-title">End-to-End ML Pipeline with FastAPI Model Serving</h3>
+              <p class="project-desc">A full ML pipeline covering data preprocessing, EDA, feature engineering, model training and evaluation — with the final model deployed as a live FastAPI endpoint.</p>
+              <ul class="project-points">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Preprocessing, EDA &amp; feature engineering on 1,000+ records</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Logistic Regression &amp; KNN tuned to 80%+ accuracy</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Live FastAPI REST endpoint for real-time inference</li>
+              </ul>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li class="tag">Python</li><li class="tag">Scikit-learn</li><li class="tag">FastAPI</li>
+                <li class="tag">Pandas</li><li class="tag">REST API</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: replace with the repo URL -->
+                <a class="project-link" href="https://github.com/sidra3921" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg> Source Code
+                </a>
+                <a class="project-link" href="#" data-demo-pending>
+                  <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 — TruckMe freight loadboard (featured: spans two columns on tablet/desktop) -->
+          <article class="card project-card project-card--featured reveal" data-category="mobile mlops">
+            <div class="project-media">
+              <img src="assets/projects/truckme/cover.jpg" alt="TruckMe admin dashboard in Arabic beside the Flutter app's shipment cards in left-to-right and right-to-left layouts" width="1680" height="720" loading="lazy" decoding="async" />
+              <span class="project-badge">Full Stack · Flutter</span>
+              <a class="media-gallery" href="assets/projects/truckme/01-dashboard.jpg" data-gallery-open="truckme" aria-label="View 8 TruckMe screenshots">
+                <span class="media-gallery-chip"><svg class="icon" aria-hidden="true"><use href="#i-images" /></svg> 8 screenshots</span>
+              </a>
+            </div>
+            <ul class="gallery-data" data-gallery="truckme" data-title="TruckMe — Freight Loadboard" hidden>
+              <li data-src="assets/projects/truckme/01-dashboard.jpg" data-thumb="assets/projects/truckme/thumbs/01-dashboard.jpg" data-caption="Admin dashboard — GMV, active trips, connected drivers, commission and alerts (Arabic, right-to-left)"></li>
+              <li data-src="assets/projects/truckme/02-load-detail.jpg" data-thumb="assets/projects/truckme/thumbs/02-load-detail.jpg" data-caption="Load detail — Dubai Port to Abu Dhabi Port, with dispatch monitoring and driver offers"></li>
+              <li data-src="assets/projects/truckme/03-cross-border.jpg" data-thumb="assets/projects/truckme/thumbs/03-cross-border.jpg" data-caption="Cross-border rules between the UAE and Saudi Arabia"></li>
+              <li data-src="assets/projects/truckme/04-finance.jpg" data-thumb="assets/projects/truckme/thumbs/04-finance.jpg" data-caption="Finance overview — driver earnings, commission revenue and cash debts"></li>
+              <li data-src="assets/projects/truckme/05-theme-editor.jpg" data-thumb="assets/projects/truckme/thumbs/05-theme-editor.jpg" data-caption="Runtime theme editor with a live preview of the mobile app"></li>
+              <li data-src="assets/projects/truckme/06-maps-usage.jpg" data-thumb="assets/projects/truckme/thumbs/06-maps-usage.jpg" data-caption="Google Maps Platform usage per API, with daily and monthly request budgets"></li>
+              <li data-src="assets/projects/truckme/07-app-ltr-rtl.jpg" data-thumb="assets/projects/truckme/thumbs/07-app-ltr-rtl.jpg" data-caption="Flutter shipment widgets in left-to-right and mirrored right-to-left layouts"></li>
+              <li data-src="assets/projects/truckme/08-driver-earnings.jpg" data-thumb="assets/projects/truckme/thumbs/08-driver-earnings.jpg" data-caption="Driver trip progress and earnings — LTR and RTL"></li>
+            </ul>
+            <div class="project-body">
+              <p class="project-kicker">Flutter · FastAPI · Next.js</p>
+              <h3 class="project-title">TruckMe — Freight Loadboard Platform</h3>
+              <div class="project-columns">
+                <div>
+                  <p class="project-desc">A freight and transport platform connecting shippers, fleet owners and drivers — digital load posting and offers, live trip tracking, payments and accounting, with cross-border rules between the UAE and Saudi Arabia.</p>
+                  <ul class="project-points">
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>One Flutter app for shippers, drivers and fleet owners, with role-based UI</li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Google Maps, Routes &amp; Navigation SDK with live tracking over WebSocket</li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>5 languages — English, Urdu, Arabic, Hindi, Punjabi — with full RTL support</li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Next.js admin panel for KYC, dispatch, finance, theming and audit logs</li>
+                  </ul>
+                </div>
+                <div class="project-aside">
+                  <ul class="tag-list" aria-label="Tech stack">
+                    <li class="tag">Flutter</li><li class="tag">Dart</li><li class="tag">Riverpod</li>
+                    <li class="tag">FastAPI</li><li class="tag">PostgreSQL / PostGIS</li><li class="tag">Celery</li>
+                    <li class="tag">Redis</li><li class="tag">Next.js</li><li class="tag">Docker</li>
+                    <li class="tag">Google Maps</li>
+                  </ul>
+                  <div class="project-links">
+                    <span class="project-link project-link--muted">
+                      <svg class="icon" aria-hidden="true"><use href="#i-lock" /></svg> Private repository
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 — Rozana Budget -->
+          <article class="card project-card reveal" data-category="genai">
+            <div class="project-media">
+              <img src="assets/projects/rozana/cover.jpg" alt="Rozana Budget household budgeting dashboard on desktop and mobile" width="1200" height="675" loading="lazy" decoding="async" />
+              <span class="project-badge project-badge--live">Live</span>
+              <a class="media-gallery" href="assets/projects/rozana/01-overview.jpg" data-gallery-open="rozana" aria-label="View 5 Rozana Budget screenshots">
+                <span class="media-gallery-chip"><svg class="icon" aria-hidden="true"><use href="#i-images" /></svg> 5 screenshots</span>
+              </a>
+            </div>
+            <ul class="gallery-data" data-gallery="rozana" data-title="Rozana Budget" hidden>
+              <li data-src="assets/projects/rozana/01-overview.jpg" data-thumb="assets/projects/rozana/thumbs/01-overview.jpg" data-caption="Monthly budget dashboard with spending, shopping cart and pantry totals"></li>
+              <li data-src="assets/projects/rozana/02-expense-pantry.jpg" data-thumb="assets/projects/rozana/thumbs/02-expense-pantry.jpg" data-caption="Expense and pantry trackers, saved locally in the browser"></li>
+              <li data-src="assets/projects/rozana/03-grocery-list.jpg" data-thumb="assets/projects/rozana/thumbs/03-grocery-list.jpg" data-caption="Grocery list planner with quantities, estimates and bought toggles"></li>
+              <li data-src="assets/projects/rozana/04-meal-planner.jpg" data-thumb="assets/projects/rozana/thumbs/04-meal-planner.jpg" data-caption="Gemini meal planner and live budget insights"></li>
+              <li data-src="assets/projects/rozana/05-mobile.jpg" data-thumb="assets/projects/rozana/thumbs/05-mobile.jpg" data-caption="Responsive mobile layout"></li>
+            </ul>
+            <div class="project-body">
+              <p class="project-kicker">Web App · GenAI</p>
+              <h3 class="project-title">Rozana Budget</h3>
+              <p class="project-desc">A local-first household budgeting app for Pakistani families — track monthly expenses, manage the pantry and grocery list, and generate practical weekly meal plans with Gemini.</p>
+              <ul class="project-points">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Budget dashboard with live savings and over-budget feedback</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Expense, pantry and grocery trackers saved in the browser — no login</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Gemini meal planner with an offline fallback</li>
+              </ul>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li class="tag">Next.js</li><li class="tag">React</li><li class="tag">TypeScript</li>
+                <li class="tag">Tailwind CSS</li><li class="tag">Gemini API</li><li class="tag">Vercel</li>
+              </ul>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/sidra3921/act_ai" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg> Source Code
+                </a>
+                <a class="project-link" href="https://act-ai-xhsm.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-more reveal">
+          <a class="btn btn-outline" href="https://github.com/sidra3921?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+            More on GitHub
+            <svg class="icon" aria-hidden="true"><use href="#i-external" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESEARCH
+         ============================================================ -->
+    <section id="research" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>04</span> Research</p>
+          <h2 class="section-title">Accessible AI for <span class="gradient-text nowrap">right-to-left</span> users</h2>
+          <p class="section-sub">Measuring where AI-generated interfaces break for Urdu speakers — and whether a single prompt can fix it.</p>
+        </header>
+
+        <article class="card paper-card reveal">
+          <div class="paper-main">
+            <div class="paper-badges">
+              <span class="paper-type">Short paper</span>
+              <!-- Update this status as the paper progresses, e.g. "Under review · SE4All 2027 (ICSE 2027)" -->
+              <span class="paper-status"><span class="pulse-dot" aria-hidden="true"></span>In progress · targeting SE4All 2027 (ICSE 2027)</span>
+            </div>
+
+            <h3 class="paper-title">Do LLMs Generate Accessible Urdu Interfaces?</h3>
+
+            <p class="paper-abstract">
+              Developers already know that LLMs tend to mishandle right-to-left (RTL) languages, yet studies of the
+              accessibility of LLM-generated interfaces use English prompts and left-to-right layouts — even the one
+              that compares prompt languages (English vs. Portuguese) stays within an LTR language. This study measures
+              the gap rigorously: the same UI tasks are prompted in Urdu and in English, every generated page is rendered
+              and audited, and each failure is mapped to WCAG in a taxonomy of RTL accessibility problems.
+            </p>
+
+            <ul class="paper-stats" aria-label="Study design">
+              <li><strong>40</strong><span>UI tasks in 4 categories</span></li>
+              <li><strong>80</strong><span>paired Urdu / English prompts</span></li>
+              <li><strong>3–4</strong><span>LLMs, commercial &amp; open-weight</span></li>
+              <li><strong>6</strong><span>custom RTL checks</span></li>
+            </ul>
+
+            <ul class="tag-list" aria-label="Methods and tools">
+              <li class="tag">Python</li><li class="tag">Playwright</li><li class="tag">axe-core</li>
+              <li class="tag">Node.js</li><li class="tag">WCAG</li><li class="tag">Wilcoxon signed-rank</li>
+              <li class="tag">LLM APIs</li>
+            </ul>
+
+            <div class="project-links">
+              <!-- TODO: link the preprint / dataset when released, and remove data-demo-pending -->
+              <a class="project-link" href="#" data-demo-pending data-pending-message="The paper is in progress — the preprint will be linked here.">
+                <svg class="icon" aria-hidden="true"><use href="#i-file" /></svg> Preprint (coming soon)
+              </a>
+              <a class="project-link" href="#" data-demo-pending data-pending-message="The prompt dataset and RTL checks will be released openly with the paper.">
+                <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg> Dataset &amp; checks
+              </a>
+              <a class="project-link" href="#contact">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg> Discuss this research
+              </a>
+            </div>
+          </div>
+
+          <aside class="paper-side" aria-label="Generate-and-audit pipeline">
+            <p class="paper-side-title">Generate-and-audit pipeline</p>
+            <ol class="pipeline">
+              <li>
+                <span class="pipeline-num" aria-hidden="true">01</span>
+                <div>
+                  <strong>Paired prompts</strong>
+                  <span class="pipeline-desc">Each task written in Urdu and English, cross-reviewed by a native speaker.</span>
+                  <span class="prompt-pair" aria-label="Example prompt pair">
+                    <span lang="en">Create a contact form</span>
+                    <span lang="ur" dir="rtl">ایک رابطہ فارم بنائیں</span>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <span class="pipeline-num" aria-hidden="true">02</span>
+                <div>
+                  <strong>Generate</strong>
+                  <span class="pipeline-desc">Fresh session and default settings; one self-contained HTML page per prompt.</span>
+                </div>
+              </li>
+              <li>
+                <span class="pipeline-num" aria-hidden="true">03</span>
+                <div>
+                  <strong>Render</strong>
+                  <span class="pipeline-desc">Every page rendered in Chromium with Playwright.</span>
+                </div>
+              </li>
+              <li>
+                <span class="pipeline-num" aria-hidden="true">04</span>
+                <div>
+                  <strong>Audit</strong>
+                  <span class="pipeline-desc">axe-core plus six custom RTL checks on the rendered DOM and computed styles.</span>
+                </div>
+              </li>
+              <li>
+                <span class="pipeline-num" aria-hidden="true">05</span>
+                <div>
+                  <strong>Analyse</strong>
+                  <span class="pipeline-desc">Paired Urdu-vs-English comparison and per-model failure rates.</span>
+                </div>
+              </li>
+            </ol>
+          </aside>
+        </article>
+
+        <div class="rq-grid">
+          <article class="card rq-card reveal">
+            <span class="rq-label">RQ1</span>
+            <h3>Does Urdu come out worse?</h3>
+            <p>Compares axe-core violation counts on each Urdu page and its English twin, using a Wilcoxon signed-rank test on the paired differences.</p>
+          </article>
+          <article class="card rq-card tone-2 reveal">
+            <span class="rq-label">RQ2</span>
+            <h3>What breaks in Urdu?</h3>
+            <p>Six custom checks catch what axe-core misses. Results are reported as the share of pages affected, per failure type and per model.</p>
+          </article>
+          <article class="card rq-card reveal">
+            <span class="rq-label">RQ3</span>
+            <h3>Can one sentence fix it?</h3>
+            <p>Adds a short RTL-aware instruction to the Urdu prompts, regenerates the pages, and measures how much each failure type drops.</p>
+          </article>
+        </div>
+
+        <div class="research-bottom">
+          <article class="card checks-card reveal">
+            <h3 class="research-card-title">Six RTL checks that axe-core misses</h3>
+            <ol class="check-list">
+              <li>
+                <span class="check-name">Page &amp; inline language <span class="wcag">WCAG 3.1.1 · 3.1.2</span></span>
+                <span class="check-desc"><code>lang</code> missing or not <code>ur</code>; English spans inside Urdu left untagged.</span>
+              </li>
+              <li>
+                <span class="check-name">Document direction <span class="wcag wcag--layout">RTL layout</span></span>
+                <span class="check-desc">Root element not set to <code>dir="rtl"</code>.</span>
+              </li>
+              <li>
+                <span class="check-name">Physical CSS <span class="wcag wcag--layout">RTL layout</span></span>
+                <span class="check-desc"><code>margin-left</code> or <code>text-align: left</code> instead of logical properties like <code>margin-inline-start</code>.</span>
+              </li>
+              <li>
+                <span class="check-name">Icon mirroring <span class="wcag wcag--layout">RTL layout</span></span>
+                <span class="check-desc">Back arrows and chevrons not flipped for right-to-left reading.</span>
+              </li>
+              <li>
+                <span class="check-name">Reading order <span class="wcag">WCAG 1.3.2 · 2.4.3</span></span>
+                <span class="check-desc">DOM and tab order disagree with the visual reading order.</span>
+              </li>
+              <li>
+                <span class="check-name">Bidi text <span class="wcag wcag--layout">Bidi</span></span>
+                <span class="check-desc">English words and digits inside Urdu text without direction isolation.</span>
+              </li>
+            </ol>
+            <p class="check-note">WCAG has no dedicated right-to-left success criterion, so layout checks are mapped to the closest reading-order and layout criteria.</p>
+          </article>
+
+          <article class="card contrib-card tone-2 reveal">
+            <h3 class="research-card-title">What the study contributes</h3>
+            <ul class="contrib-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>A rigorous, WCAG-mapped measurement of RTL failures in LLM-generated UIs</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>A taxonomy of RTL accessibility failures</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>An open Urdu / English paired prompt dataset</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>A reusable suite of automated RTL checks</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>An evaluated one-sentence mitigation prompt</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+         ============================================================ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>05</span> Skills</p>
+          <h2 class="section-title">My <span class="gradient-text">toolkit</span></h2>
+          <p class="section-sub">The languages, frameworks and habits I rely on to ship ML models and mobile apps to production.</p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-cpu" /></svg></span>
+              <div>
+                <h3>Core Python &amp; ML</h3>
+                <p>Modeling, data &amp; evaluation</p>
+              </div>
+            </div>
+            <ul class="badge-list">
+              <li class="badge">Python</li><li class="badge">Pandas</li><li class="badge">NumPy</li>
+              <li class="badge">Scikit-learn</li><li class="badge">Machine Learning</li>
+              <li class="badge">Logistic Regression</li><li class="badge">K-Nearest Neighbors (KNN)</li>
+              <li class="badge">Feature Engineering</li><li class="badge">EDA</li>
+              <li class="badge">Cross-Validation</li><li class="badge">Hyperparameter Tuning</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card tone-2 reveal">
+            <div class="skill-head">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-sparkles" /></svg></span>
+              <div>
+                <h3>GenAI &amp; LLMs</h3>
+                <p>Retrieval, generation &amp; LLM apps</p>
+              </div>
+            </div>
+            <ul class="badge-list">
+              <li class="badge">RAG</li><li class="badge">LLM Applications</li><li class="badge">LangChain</li>
+              <li class="badge">Vector Embeddings</li><li class="badge">ChromaDB</li><li class="badge">Ollama</li>
+              <li class="badge">Llama 3</li><li class="badge">Streamlit</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card tone-2 reveal">
+            <div class="skill-head">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-phone-app" /></svg></span>
+              <div>
+                <h3>Mobile App Development</h3>
+                <p>Cross-platform apps with Flutter</p>
+              </div>
+            </div>
+            <ul class="badge-list">
+              <li class="badge">Flutter SDK</li><li class="badge">Dart</li><li class="badge">Firebase</li>
+              <li class="badge">Firestore</li><li class="badge">Firebase Auth</li><li class="badge">Crashlytics</li>
+              <li class="badge">Google Play Store</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg></span>
+              <div>
+                <h3>Backend, MLOps &amp; Tools</h3>
+                <p>Serving, APIs &amp; version control</p>
+              </div>
+            </div>
+            <ul class="badge-list">
+              <li class="badge">FastAPI</li><li class="badge">RESTful APIs</li><li class="badge">Model Deployment</li>
+              <li class="badge">Git</li><li class="badge">GitHub</li><li class="badge">Agile/Scrum</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card skill-card--wide tone-2 reveal">
+            <div class="skill-head">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+              <div>
+                <h3>Professional Skills</h3>
+                <p>How I work with people</p>
+              </div>
+            </div>
+            <ul class="badge-list">
+              <li class="badge">Critical Thinking</li><li class="badge">Communication</li>
+              <li class="badge">Written Communication</li><li class="badge">Active Listening</li>
+              <li class="badge">Multitasking</li><li class="badge">Agile Collaboration</li>
+              <li class="badge">Dependable &amp; Responsible</li><li class="badge">Google Workspace</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EDUCATION & CERTIFICATIONS
+         ============================================================ -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>06</span> Education &amp; Certifications</p>
+          <h2 class="section-title">Always <span class="gradient-text">learning</span></h2>
+          <p class="section-sub">A software engineering foundation, sharpened by focused AI training from industry and academia.</p>
+        </header>
+
+        <h3 class="sub-heading reveal">Education</h3>
+        <div class="edu-grid">
+          <article class="card edu-card reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-cap" /></svg></span>
+            <div>
+              <p class="edu-date">Jun 2026</p>
+              <h4 class="edu-degree">Bachelor of Engineering in Software Engineering</h4>
+              <p class="edu-school">Lahore College for Women University, Lahore, Pakistan</p>
+            </div>
+          </article>
+          <article class="card edu-card tone-2 reveal">
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-cap" /></svg></span>
+            <div>
+              <p class="edu-date">Jan 2022</p>
+              <h4 class="edu-degree">FSc Pre-Engineering</h4>
+              <p class="edu-school">Punjab College, Campus 2 Muslim Town, Lahore</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="sub-heading-row reveal">
+          <h3 class="sub-heading">Certifications</h3>
+          <!-- Appears automatically once at least one certificate image is set -->
+          <button class="btn btn-outline btn-sm" id="cert-view-all" type="button" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#i-images" /></svg> View all certificates
+          </button>
+        </div>
+        <div class="cert-grid">
+          <!--
+            CERTIFICATE IMAGES & LINKS
+            - data-cert-img: the certificate image. Paste a Cloudinary URL straight from your Media Library
+              (e.g. https://res.cloudinary.com/<cloud-name>/image/upload/v123/certificates/navttc-ai.jpg) —
+              script.js adds Cloudinary resizing/format optimisation automatically — or use a local file
+              such as assets/certificates/navttc-ai.jpg. The card then shows a thumbnail that opens full-size.
+            - data-cert-url: the "Show credential" link (e.g. from LinkedIn / the issuer's verification page).
+            Leave either empty to hide it.
+
+            Card order is deliberate: --featured spans 2 columns from 640px, --wide from 1024px,
+            so the grid has no gaps at 1, 2 or 3 columns.
+          -->
+          <!-- NAVTTC: photo of the printed certificate (CNIC number blurred). Add a verification URL in data-cert-url if NAVTTC provides one. -->
+          <article class="card cert-card cert-card--featured reveal"
+                   data-cert-img="assets/certificates/navttc-artificial-intelligence.jpg" data-cert-url="">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+              <span class="cert-grade">Grade A+</span>
+            </div>
+            <h4 class="cert-title">Artificial Intelligence (Machine Learning, Deep Learning, Communication)</h4>
+            <p class="cert-issuer">NAVTTC Prime Minister's Youth Skills Development Program · NETSOL Institute of Artificial Intelligence</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> Sep 2026</p>
+          </article>
+
+          <article class="card cert-card tone-2 reveal"
+                   data-cert-img="assets/certificates/google-introduction-to-ai.jpg"
+                   data-cert-url="https://www.coursera.org/account/accomplishments/verify/LUTZXG2OBCAU">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+            </div>
+            <h4 class="cert-title">Introduction to AI</h4>
+            <p class="cert-issuer">Google · Coursera</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> Jun 2026</p>
+          </article>
+
+          <article class="card cert-card cert-card--wide tone-2 reveal"
+                   data-cert-img="assets/certificates/act-ai-skillbridge.jpg" data-cert-pos="center 15%"
+                   data-cert-url="https://actai.aiskillbridge.pk/v/ZTVNACS8QLBUYVNX">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+            </div>
+            <h4 class="cert-title">ACT AI — Awareness, Competency &amp; Tools Training for Artificial Intelligence</h4>
+            <p class="cert-issuer">AI SkillBridge · National AI Training Programme under the Prime Minister's Youth Programme, delivered with HEC &amp; NAVTTC</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> Jul 2026</p>
+          </article>
+
+          <article class="card cert-card reveal"
+                   data-cert-img="assets/certificates/google-ai-fundamentals.jpg"
+                   data-cert-url="https://www.coursera.org/account/accomplishments/verify/HF4ND7JXQNDB">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+            </div>
+            <h4 class="cert-title">Google AI Fundamentals</h4>
+            <p class="cert-issuer">Google · Coursera</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> Jun 2026</p>
+          </article>
+
+          <article class="card cert-card reveal"
+                   data-cert-img="assets/certificates/kaggle-ai-agents-intensive.jpg"
+                   data-cert-url="https://www.kaggle.com/certification/badges/sidra3921/105">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+            </div>
+            <h4 class="cert-title">5-Day AI Agents Intensive Course with Google</h4>
+            <p class="cert-issuer">Kaggle &amp; Google</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> Dec 2025</p>
+          </article>
+
+          <!-- This link is the public course page (not a personal credential), so the button says "View course" -->
+          <article class="card cert-card tone-2 reveal" data-cert-img=""
+                   data-cert-url="https://www.skills.google/course_templates/539" data-cert-label="View course">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+            </div>
+            <h4 class="cert-title">Introduction to Large Language Models</h4>
+            <p class="cert-issuer">Google · Google Skills</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> 2026</p>
+          </article>
+
+          <article class="card cert-card reveal"
+                   data-cert-img="assets/certificates/ulef-generative-ai-developer.jpg"
+                   data-cert-url="https://quiz.ideagist.com/ideagist-certificate/?cert_hash=4b82a6a73ae21452">
+            <div class="cert-top">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+              <span class="cert-grade">Top Performer</span>
+            </div>
+            <h4 class="cert-title">Generative AI Application Developer</h4>
+            <p class="cert-issuer">UETians Lahore Endowment Foundation USA · NCEAC–HEC Generative AI Training with PakAngels</p>
+            <p class="cert-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> Dec 2025</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>07</span> Contact</p>
+          <h2 class="section-title">Let's build something <span class="gradient-text">intelligent</span></h2>
+          <p class="section-sub">Hiring for an AI/ML or Flutter role, or have a project or collaboration in mind? My inbox is always open.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-list reveal">
+            <div class="card contact-card">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg></span>
+              <div class="contact-body">
+                <span class="contact-label">Email</span>
+                <a class="contact-value" href="mailto:sidra3921@gmail.com">sidra3921@gmail.com</a>
+              </div>
+              <button class="icon-btn copy-btn" type="button" data-copy="sidra3921@gmail.com" data-copy-label="Email address" aria-label="Copy email address">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+              </button>
+            </div>
+
+            <div class="card contact-card tone-2">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg></span>
+              <div class="contact-body">
+                <span class="contact-label">Phone</span>
+                <a class="contact-value" href="tel:+923098699567">+92 309 8699567</a>
+              </div>
+              <button class="icon-btn copy-btn" type="button" data-copy="+92 309 8699567" data-copy-label="Phone number" aria-label="Copy phone number">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+              </button>
+            </div>
+
+            <div class="card contact-card">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></span>
+              <div class="contact-body">
+                <span class="contact-label">LinkedIn</span>
+                <a class="contact-value" href="https://www.linkedin.com/in/sidra3921" target="_blank" rel="noopener noreferrer">linkedin.com/in/sidra3921</a>
+              </div>
+              <svg class="icon contact-arrow" aria-hidden="true"><use href="#i-external" /></svg>
+            </div>
+
+            <div class="card contact-card tone-2">
+              <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></span>
+              <div class="contact-body">
+                <span class="contact-label">GitHub</span>
+                <a class="contact-value" href="https://github.com/sidra3921" target="_blank" rel="noopener noreferrer">github.com/sidra3921</a>
+              </div>
+              <svg class="icon contact-arrow" aria-hidden="true"><use href="#i-external" /></svg>
+            </div>
+
+            <div class="contact-location">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>
+              Based in Lahore, Pakistan
+            </div>
+          </div>
+
+          <!--
+            Contact form — works out of the box on Netlify (Netlify Forms).
+            Netlify detects it at deploy time thanks to data-netlify="true".
+            When opened locally (file://) or on another host, script.js falls back to the visitor's email app.
+          -->
+          <form class="card contact-form reveal" id="contact-form" name="contact" method="POST"
+                data-netlify="true" netlify-honeypot="bot-field" data-fallback-email="sidra3921@gmail.com" novalidate>
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hp-field" aria-hidden="true">
+              <label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <h3 class="form-title">Send a message</h3>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Your name" required aria-describedby="cf-name-error" />
+                <span class="field-error" id="cf-name-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required aria-describedby="cf-email-error" />
+                <span class="field-error" id="cf-email-error"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-subject">Subject <span class="optional">(optional)</span></label>
+              <input id="cf-subject" name="subject" type="text" placeholder="AI/ML Engineer role, collaboration, …" />
+            </div>
+
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell me a little about the role or project…" required aria-describedby="cf-message-error"></textarea>
+              <span class="field-error" id="cf-message-error"></span>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">
+              <span class="btn-label">Send Message</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-send" /></svg>
+            </button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand" aria-label="Sidra — back to top">
+            <span class="brand-mark" aria-hidden="true">S</span>
+            <span class="brand-name">Sidra<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">AI/ML Engineer &amp; Flutter Developer building ML pipelines, RAG &amp; LLM applications, and cross-platform mobile apps.</p>
+        </div>
+        <ul class="social-row" aria-label="Social profiles">
+          <li><a class="icon-btn" href="https://github.com/sidra3921" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github" /></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/in/sidra3921" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg></a></li>
+          <li><a class="icon-btn" href="mailto:sidra3921@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg></a></li>
+          <li><a class="icon-btn" href="tel:+923098699567" aria-label="Call +92 309 8699567"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg></a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Sidra. All rights reserved.</p>
+        <p>Built with <span class="code-accent">HTML/CSS/JS</span> by Sidra</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg>
+  </button>
+
+  <!-- ============================================================
+       IMAGE VIEWER (lightbox) — used by project screenshots and certificates
+       ============================================================ -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-inner">
+      <div class="lightbox-bar">
+        <p class="lightbox-title" id="lightbox-title"></p>
+        <span class="lightbox-count" id="lightbox-count"></span>
+        <button class="icon-btn lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">
+          <svg class="icon" aria-hidden="true"><use href="#i-x" /></svg>
+        </button>
+      </div>
+      <div class="lightbox-stage">
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">
+          <svg class="icon" aria-hidden="true"><use href="#i-chevron-left" /></svg>
+        </button>
+        <figure class="lightbox-figure">
+          <div class="lightbox-media">
+            <img class="lightbox-img" id="lightbox-img" alt="" />
+          </div>
+          <figcaption class="lightbox-caption" id="lightbox-caption" aria-live="polite"></figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">
+          <svg class="icon" aria-hidden="true"><use href="#i-chevron-right" /></svg>
+        </button>
+      </div>
+      <div class="lightbox-thumbs" id="lightbox-thumbs"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

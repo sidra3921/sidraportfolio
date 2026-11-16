@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Banner: Wikipedia RAG Chatbot (documents → vector store → LLM answer) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1730"/>
+      <stop offset="1" stop-color="#050d18"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#94a3b8" stroke-opacity=".07"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#22d3ee"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <circle cx="400" cy="200" r="190" fill="url(#glow)"/>
+
+  <!-- Documents -->
+  <g transform="translate(62 118)">
+    <rect x="26" y="-18" width="124" height="152" rx="12" fill="#12203e" stroke="#94a3b8" stroke-opacity=".18"/>
+    <rect x="13" y="-9" width="124" height="152" rx="12" fill="#152649" stroke="#94a3b8" stroke-opacity=".24"/>
+    <rect x="0" y="0" width="124" height="152" rx="12" fill="#1a2e58" stroke="#22d3ee" stroke-opacity=".55"/>
+    <text x="20" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#e6edf7">W</text>
+    <rect x="20" y="66" width="80" height="6" rx="3" fill="#94a3b8" fill-opacity=".45"/>
+    <rect x="20" y="82" width="64" height="6" rx="3" fill="#94a3b8" fill-opacity=".35"/>
+    <rect x="20" y="98" width="72" height="6" rx="3" fill="#94a3b8" fill-opacity=".35"/>
+    <rect x="20" y="114" width="50" height="6" rx="3" fill="#22d3ee" fill-opacity=".7"/>
+  </g>
+
+  <path d="M222 196 H296" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Vector space -->
+  <circle cx="400" cy="196" r="86" fill="none" stroke="#22d3ee" stroke-opacity=".28" stroke-dasharray="3 7"/>
+  <g fill="#94a3b8" fill-opacity=".55">
+    <circle cx="352" cy="168" r="4"/><circle cx="366" cy="230" r="4"/><circle cx="380" cy="146" r="4"/>
+    <circle cx="390" cy="252" r="4"/><circle cx="412" cy="136" r="4"/><circle cx="430" cy="240" r="4"/>
+    <circle cx="372" cy="196" r="4"/><circle cx="416" cy="262" r="4"/><circle cx="338" cy="204" r="4"/>
+    <circle cx="460" cy="186" r="4"/><circle cx="352" cy="244" r="4"/><circle cx="458" cy="226" r="4"/>
+    <circle cx="384" cy="214" r="4"/>
+  </g>
+  <!-- query + nearest neighbours -->
+  <g stroke="#34d399" stroke-width="1.6" stroke-opacity=".85">
+    <path d="M420 194 L440 202 M420 194 L426 162 M420 194 L398 176"/>
+  </g>
+  <g fill="#22d3ee">
+    <circle cx="440" cy="202" r="5.5"/><circle cx="426" cy="162" r="5.5"/><circle cx="398" cy="176" r="5.5"/>
+  </g>
+  <circle cx="420" cy="194" r="9" fill="#34d399" fill-opacity=".25"/>
+  <circle cx="420" cy="194" r="5.5" fill="#34d399"/>
+
+  <path d="M504 196 H578" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Chat -->
+  <g transform="translate(592 112)">
+    <rect x="34" y="0" width="120" height="46" rx="14" fill="#12203e" stroke="#94a3b8" stroke-opacity=".45"/>
+    <rect x="50" y="15" width="80" height="6" rx="3" fill="#94a3b8" fill-opacity=".6"/>
+    <rect x="50" y="27" width="52" height="6" rx="3" fill="#94a3b8" fill-opacity=".45"/>
+    <rect x="0" y="62" width="154" height="86" rx="14" fill="url(#acc)"/>
+    <rect x="16" y="80" width="112" height="6" rx="3" fill="#03121a" fill-opacity=".55"/>
+    <rect x="16" y="94" width="122" height="6" rx="3" fill="#03121a" fill-opacity=".45"/>
+    <rect x="16" y="108" width="96" height="6" rx="3" fill="#03121a" fill-opacity=".45"/>
+    <rect x="16" y="122" width="64" height="6" rx="3" fill="#03121a" fill-opacity=".35"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="'JetBrains Mono', Consolas, Menlo, monospace" font-size="13" fill="#8b9bb3" text-anchor="middle">
+    <text x="136" y="318">Wikipedia articles</text>
+    <text x="400" y="318">ChromaDB vectors</text>
+    <text x="669" y="318">Llama 3 via Ollama</text>
+  </g>
+  <text x="400" y="392" text-anchor="middle" font-family="'JetBrains Mono', Consolas, Menlo, monospace" font-size="15" letter-spacing="3" fill="#22d3ee" fill-opacity=".9">RETRIEVE → AUGMENT → GENERATE</text>
+</svg>

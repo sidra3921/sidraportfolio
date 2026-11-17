@@ -11,6 +11,7 @@ sidraportfolio/
 ├── index.html                  # All page content and sections
 ├── style.css                   # Design tokens, layout, components, animations
 ├── script.js                   # Interactivity (theme, menu, typing, filters, form, canvas)
+├── chatbot.js                  # Portfolio assistant (chat widget + its knowledge base)
 ├── netlify.toml                # Netlify deploy settings and headers
 └── assets/
     ├── favicon.svg
@@ -53,8 +54,9 @@ Then visit http://localhost:8000.
 | **Typing roles** | `data-roles` attribute on `#typed-text` in the hero |
 | **Research status** | Update the `.paper-status` text in the Research section as the paper progresses (e.g. "Under review", "Accepted"), and link the preprint/dataset when released |
 | **Profile code card** | Edit the plain text inside `#profile-code` in the hero. Highlighting, line numbers and the `Ln, Col` status are generated automatically |
+| **Chatbot answers** | Edit the `INTENTS` list at the top of `chatbot.js`: each entry has `keys` (trigger words), an `answer` (HTML) and follow-up `chips`. Everything runs in the visitor's browser, so there are no API keys or costs |
 | **Colours** | `:root` and `[data-theme="light"]` tokens at the top of `style.css` |
-| **Social preview** | Uncomment the `og:image` and `og:url` meta tags in `<head>` after deploying |
+| **Social preview** | `assets/og-image.jpg` (1200×630) is the image shown when the link is shared on LinkedIn, WhatsApp, etc. If the site address changes, update the `og:url`, `og:image` and `canonical` tags in `<head>` |
 
 ## Deploy to Netlify
 

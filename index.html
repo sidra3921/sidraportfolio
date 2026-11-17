@@ -13,12 +13,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sidra — AI/ML Engineer &amp; Flutter Developer" />
   <meta property="og:description" content="End-to-end ML pipelines, RAG &amp; LLM applications, and cross-platform Flutter apps." />
-  <!--
-    TODO: once deployed, add an absolute preview image + your live URL, e.g.
-    <meta property="og:image" content="https://res.cloudinary.com/<cloud-name>/image/upload/c_fill,w_1200,h_630,q_auto,f_auto/sidra-og.jpg" />
-    <meta property="og:url" content="https://your-site.netlify.app/" />
-  -->
+  <meta property="og:url" content="https://sidra3921.netlify.app/" />
+  <meta property="og:image" content="https://sidra3921.netlify.app/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sidra — AI/ML Engineer &amp; Flutter Developer" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://sidra3921.netlify.app/assets/og-image.jpg" />
+  <link rel="canonical" href="https://sidra3921.netlify.app/" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
@@ -47,6 +49,8 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sidra",
+    "url": "https://sidra3921.netlify.app/",
+    "image": "https://sidra3921.netlify.app/assets/images/sidra-profile.jpg",
     "jobTitle": "AI/ML Engineer & Flutter Developer",
     "email": "mailto:sidra3921@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
@@ -95,6 +99,7 @@
     <symbol id="i-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
     <symbol id="i-images" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.3-1.3a2.41 2.41 0 0 0-3.4 0L11 18"/><circle cx="12" cy="8" r="2"/><rect x="6" y="2" width="16" height="16" rx="2"/></symbol>
     <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
     <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8M16 17H8M10 9H8"/></symbol>
     <symbol id="i-branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
@@ -1013,7 +1018,7 @@
           </article>
 
           <article class="card cert-card cert-card--wide tone-2 reveal"
-                   data-cert-img="assets/certificates/act-ai-skillbridge.jpg" data-cert-pos="center 15%"
+                   data-cert-img="assets/certificates/act-ai-skillbridge.jpg" data-cert-pos="center 22%"
                    data-cert-url="https://actai.aiskillbridge.pk/v/ZTVNACS8QLBUYVNX">
             <div class="cert-top">
               <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
@@ -1243,5 +1248,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js" defer></script>
+  <!-- Portfolio assistant (chatbot) — answers come from the knowledge base inside chatbot.js -->
+  <script src="chatbot.js" defer></script>
 </body>
 </html>
